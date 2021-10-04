@@ -1,39 +1,91 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Contador</title>
-  </head>
-  <body>
-    <h1>Meu Contador</h1>
+
+<head>
+  <title>Contador</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #6F012A;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      border: 10px solid green;
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    h1 {
+      background: #BA275E;
+    }
+
+    p {
+      background: #7E7F7F;
+      font-size: 100px;
+    }
+
+    div.footer {
+      background: white;
+      padding: 10px;
+    }
+
+    button {
+      border: 1px solid #6F012A;
+      color: #6F012A;
+      padding: 10px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Contador</h1>
     <p id="number">0</p>
-    <button onclick="menos()">menos</button>
-    <button onclick="mais()">mais</button>
-    <script>
+    <div class="footer">
+      <button onclick="menos()">menos</button>
+      <button onclick="mais()">mais</button>
+    </div>
+  </div>
+  <script>
 
-      const numberElement = document.getElementById("number")
+    const numberElement = document.getElementById("number")
 
-      function menos() {
-        // pegar o valor
-        let number = parseInt(numberElement.innerText)
+    function menos() {
+      // pegar o valor
+      let number = parseInt(numberElement.innerText)
 
-        // subtrar 1 do valor
-        number = number - 1
+      // subtrar 1 do valor
+      number = number - 1
 
-        // atualizar o valor
-        numberElement.innerText = number
-      }
+      // atualizar o valor
+      numberElement.innerText = number
+    }
 
-      function mais() {
-        // pegar o valor
-        let number = parseInt(numberElement.innerText)
+    function mais() {
+      // pegar o valor
+      let number = parseInt(numberElement.innerText)
 
-        // subtrar 1 do valor
-        number = number + 1
+      // subtrar 1 do valor
+      number = number + 1
 
-        // atualizar o valor
-        numberElement.innerText = number
-      }
+      // atualizar o valor
+      numberElement.innerText = number
+    }
 
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
